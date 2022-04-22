@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="tests">
+
+  <test thread-count="5" name="Test1">
+    <classes>
+      <class name="am.karas.TestScripts.VerifySearchFoodTest"/>
+    </classes>
+  </test> 
+
+  <test thread-count="5" name="Test2">
+    <classes>
+      <class name="am.karas.TestScripts.VerifySelectFoodTest"/>
+    </classes>
+  </test> 
+
+  <test thread-count="5" name="Test3">
+    <classes>
+      <class name="am.karas.TestScripts.VerifyFoodInFoodCartTest"/>
+    </classes>
+  </test> 
+
+	<test thread-count="5" name="Test4">
+	    <classes>
+	      <class name="am.karas.TestScripts.VerifyOffersTest"/>
+	    </classes>
+	</test>
+
+	<test thread-count="5" name="Test5">
+	    <classes>
+	      <class name="am.karas.TestScripts.VerifyHotDishesTest"/>
+	    </classes>
+	</test>
+
+</suite> 
