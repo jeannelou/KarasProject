@@ -14,7 +14,6 @@ import utils.ScreenshotMethod;
 public class VerifyFoodInFoodCartTest extends Base
 {
 	@Test
-
 	public void verifyFoodInFoodCart() throws IOException
 	{
 		ChooseDeliveryCenter cdc = new ChooseDeliveryCenter(driver);

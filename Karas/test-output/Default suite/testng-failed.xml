@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="am.karas.TestScripts.VerifySearchFoodTest">
+      <class name="am.karas.TestScripts.VerifyFoodInFoodCartTest">
         <methods>
-          <include name="verifySearchFood"/>
           <include name="openApplication"/>
           <include name="closeApplication"/>
-          <include name="takeScreenshotOnFailure"/>
+          <include name="verifyFoodInFoodCart"/>
         </methods>
-      </class> <!-- am.karas.TestScripts.VerifySearchFoodTest -->
+      </class> <!-- am.karas.TestScripts.VerifyFoodInFoodCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

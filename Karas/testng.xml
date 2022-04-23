@@ -4,30 +4,35 @@
 <suite name="Suite" parallel="tests">
 
   <test thread-count="5" name="Test1">
+	 <parameter name ="browserType" value="chrome"/>
     <classes>
       <class name="am.karas.TestScripts.VerifySearchFoodTest"/>
     </classes>
   </test> 
 
   <test thread-count="5" name="Test2">
+	 <parameter name ="browserType" value="chrome"/>
     <classes>
       <class name="am.karas.TestScripts.VerifySelectFoodTest"/>
     </classes>
   </test> 
 
   <test thread-count="5" name="Test3">
+	 <parameter name ="browserType" value="chrome"/>
     <classes>
       <class name="am.karas.TestScripts.VerifyFoodInFoodCartTest"/>
     </classes>
   </test> 
 
 	<test thread-count="5" name="Test4">
+		<parameter name ="browserType" value="chrome"/>
 	    <classes>
 	      <class name="am.karas.TestScripts.VerifyOffersTest"/>
 	    </classes>
 	</test>
 
 	<test thread-count="5" name="Test5">
+		<parameter name ="browserType" value="chrome"/>
 	    <classes>
 	      <class name="am.karas.TestScripts.VerifyHotDishesTest"/>
 	    </classes>
