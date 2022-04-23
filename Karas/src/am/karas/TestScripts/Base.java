@@ -5,6 +5,7 @@ import java.net.URL;
 import java.time.Duration;
 
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -19,10 +20,9 @@ public class Base
 {
 	RemoteWebDriver driver;
 	
-
 	@Parameters("browserType")
 	@BeforeTest
-	public void openApplication(@Optional String browserType) throws MalformedURLException 
+	public void openApplication(String browserType) throws MalformedURLException 
 	{		
 		if(browserType.equals("chrome")) 
 		{
@@ -36,14 +36,13 @@ public class Base
 		{
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			firefoxOptions.setAcceptInsecureCerts(true);
-			firefoxOptions.setCapability(CapabilityType.BROWSER_NAME,"safari");
+			firefoxOptions.setCapability(CapabilityType.BROWSER_NAME,"firefox");
 		    driver = new RemoteWebDriver(new URL("http://192.168.56.1:4444"), firefoxOptions);
 		}
 		
 		driver.get("https://karas.am/en/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 				
 	}
 	
