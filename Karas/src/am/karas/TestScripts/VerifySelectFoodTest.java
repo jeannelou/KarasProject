@@ -17,6 +17,7 @@ public class VerifySelectFoodTest extends Base
 		SelectFood slf = new SelectFood(driver);
 		
 		cdc.selectDeliveryCenter();
+		cdc.isLoginButtonExist();
 		sf.searchFood("pizza");
 		
 		String actualText = sf.getConfirmationText();

@@ -27,6 +27,7 @@ public class VerifyFoodInFoodCartTest extends Base
 			CheckFoodCart foodcart = new CheckFoodCart(driver);
 					
 			cdc.selectDeliveryCenter();
+			cdc.isLoginButtonExist();
 			sf.searchFood("pizza");
 			
 			String actualText = sf.getConfirmationText();

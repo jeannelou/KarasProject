@@ -10,6 +10,10 @@ public class ChooseDeliveryCenter
 	@FindBy(id="Yerevan")
 	private WebElement deliverycenter;
 	
+	@FindBy(css="body > div.container-main.home-page > header > div > div.header-right > div > a.login.categories-button-shopping-cart > div > button")
+	private WebElement loginButton;
+	
+	
 	public ChooseDeliveryCenter(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -18,5 +22,10 @@ public class ChooseDeliveryCenter
 	public void selectDeliveryCenter()
 	{
 		deliverycenter.click();
+	}
+	
+	public boolean isLoginButtonExist()
+	{
+		return loginButton.isDisplayed();
 	}
 }
